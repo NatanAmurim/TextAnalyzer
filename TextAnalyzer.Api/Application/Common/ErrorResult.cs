@@ -1,4 +1,4 @@
-﻿namespace TextAnalyzer.Api.Application.DTOs
+﻿namespace TextAnalyzer.Api.Application.Common
 {
     public record ErrorResult(string Message);    
 }
