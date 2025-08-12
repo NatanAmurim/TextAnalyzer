@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36301.6 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAnalyzer.Api", "TextAnalyzer.Api\TextAnalyzer.Api.csproj", "{4F12C97D-6945-4369-B821-839D4140A792}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAnalyzer.UnitTests", "TextAnalyzer.UnitTests\TextAnalyzer.UnitTests.csproj", "{B0D7CCDB-A539-43C0-B666-C174005EBC15}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F12C97D-6945-4369-B821-839D4140A792}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F12C97D-6945-4369-B821-839D4140A792}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F12C97D-6945-4369-B821-839D4140A792}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F12C97D-6945-4369-B821-839D4140A792}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0D7CCDB-A539-43C0-B666-C174005EBC15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0D7CCDB-A539-43C0-B666-C174005EBC15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0D7CCDB-A539-43C0-B666-C174005EBC15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0D7CCDB-A539-43C0-B666-C174005EBC15}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F4E9D878-584C-4674-A03A-94F4A75E3CD5}
+	EndGlobalSection
+EndGlobal
