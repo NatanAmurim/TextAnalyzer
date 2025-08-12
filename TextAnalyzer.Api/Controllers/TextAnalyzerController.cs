@@ -1,20 +1,19 @@
 using Microsoft.AspNetCore.Mvc;
+using TextAnalyzer.Api.Application.CommandsAndQueries.TextAnalyzer.Commands;
+using TextAnalyzer.Api.Application.Handlers;
 
 namespace TextAnalyzer.Api.Controllers
 {
     [ApiController]
     [Route("api/text-analyzer")]
-    public class TextAnalyzerController : ControllerBase
+    public class TextAnalyzerController(TextAnayzerHandler textAnayzerService) : ControllerBase
     {        
-        public TextAnalyzerController()
-        {
-            
-        }
-
         [HttpPost()]
-        public IActionResult Get()
+        public IActionResult Post([FromBody] TextAnalyzerCommand textAnalyzerCommand)
         {
-            return Ok();
+            var result = textAnayzerService.AnalyzeText(textAnalyzerCommand.Text);
+
+            return Ok(result);
         }
     }
 }
