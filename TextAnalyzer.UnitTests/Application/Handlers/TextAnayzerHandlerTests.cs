@@ -27,10 +27,12 @@ namespace TextAnalyzer.UnitTests.Application.Handlers
             };
             _wordExtractorHandler.Setup(x => x.ExtractWordsFromText(It.IsAny<string>())).Returns(mockDictionary);
             
-            var analysedText  = _textAnayzerHandler.AnalyzeText("someText");
+            var result  = _textAnayzerHandler.AnalyzeText("someText");
 
-            Assert.That(analysedText, Is.SameAs("Total"));
-                      
+            Assert.That(result.Success, Is.True);            
+            Assert.That(result.WordCount, Is.EqualTo(2));
+            Assert.That(result.Occurrences!["hello"], Is.EqualTo(1));            
+            Assert.That(result.Occurrences!["word"], Is.EqualTo(2));                                  
         }
     }
 }

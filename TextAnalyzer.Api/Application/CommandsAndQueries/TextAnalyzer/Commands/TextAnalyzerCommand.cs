@@ -1,7 +1,6 @@
-﻿namespace TextAnalyzer.Api.Application.CommandsAndQueries.TextAnalyzer.Commands
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace TextAnalyzer.Api.Application.CommandsAndQueries.TextAnalyzer.Commands
 {
-    public record TextAnalyzerCommand
-    {
-        public string Text { get; set; } = string.Empty;
-    }
+    public record TextAnalyzerCommand(string Text);
 }
