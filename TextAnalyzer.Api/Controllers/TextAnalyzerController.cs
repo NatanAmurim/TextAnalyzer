@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using TextAnalyzer.Api.Application.CommandsAndQueries.TextAnalyzer.Commands;
+using TextAnalyzer.Api.Application.DTOs;
 using TextAnalyzer.Api.Application.Handlers;
 
 namespace TextAnalyzer.Api.Controllers
@@ -13,12 +14,12 @@ namespace TextAnalyzer.Api.Controllers
         {            
 
             if (string.IsNullOrEmpty(textAnalyzerCommand.Text))            
-                return BadRequest("O valor de text não pode ser nulo.");
+                return BadRequest(new ErrorResult("O valor de text não pode ser nulo."));
 
             var result = textAnayzerService.AnalyzeText(textAnalyzerCommand.Text);
 
             if (!result.Success)
-                return StatusCode(StatusCodes.Status500InternalServerError, result.Message);
+                return StatusCode(StatusCodes.Status500InternalServerError, new ErrorResult(result.Message!));
 
             return Ok(new { result.WordCount, result.Occurrences });
         }
